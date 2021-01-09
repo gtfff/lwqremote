@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="798.0" prefWidth="1021.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainScreenController">
+   <children>
+      <TableView fx:id="tableView" onMouseClicked="#onMouseClick" prefHeight="743.0" prefWidth="1021.0">
+        <columns>
+            <TableColumn fx:id="fileNameColumn" onEditCommit="#editCommit" prefWidth="578.0" text="文件名称" />
+          <TableColumn fx:id="fileTimeColumn" prefWidth="251.0" text="修改日期" />
+          <TableColumn fx:id="fileSizeColumn" prefWidth="191.0" text="文件大小(单位：B)" />
+        </columns>
+      </TableView>
+      <Button layoutX="803.0" layoutY="749.0" mnemonicParsing="false" onAction="#upload" prefHeight="42.0" prefWidth="95.0" text="上  传" />
+      <Button layoutX="912.0" layoutY="749.0" mnemonicParsing="false" onAction="#download" prefHeight="42.0" prefWidth="95.0" text="下  载" />
+      <Button layoutX="14.0" layoutY="749.0" mnemonicParsing="false" onAction="#goBackUp" prefHeight="42.0" prefWidth="95.0" text="返  回" />
+      <Button layoutX="580.0" layoutY="749.0" mnemonicParsing="false" onAction="#createDirectory" prefHeight="42.0" prefWidth="95.0" text="创建文件夹" />
+      <Button layoutX="690.0" layoutY="749.0" mnemonicParsing="false" onAction="#deleteFile" prefHeight="42.0" prefWidth="95.0" text="删  除" />
+   </children>
+</AnchorPane>
